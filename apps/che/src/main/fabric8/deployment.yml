@@ -50,6 +50,11 @@ spec:
             configMapKeyRef:
               key: "port"
               name: "che"
+        - name: "CHE_EXTERNAL_PORT"
+          valueFrom:
+            configMapKeyRef:
+              key: "external-port"
+              name: "che"
         - name: "CHE_DOCKER_CONNECTOR"
           valueFrom:
             configMapKeyRef:
@@ -65,7 +70,7 @@ spec:
             configMapKeyRef:
               key: "che-oauth-github-forceactivation"
               name: "che"
-        image: "rhche/che-server:cda3edc"
+        image: "rhche/che-server:nightly"
         imagePullPolicy: "IfNotPresent"
         name: che
         readinessProbe:

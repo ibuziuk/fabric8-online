@@ -8,5 +8,6 @@ data:
   log-level: "INFO"
   docker-connector: "openshift"
   port: "8080"
+  external-port: "443"
   remote-debugging-enabled: "false"
   che-oauth-github-forceactivation: "true"
